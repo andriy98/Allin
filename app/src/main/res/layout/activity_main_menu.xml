@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:id="@+id/activity_main_menu"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context="com.example.home.firstproject.MainMenu"
+    android:background="@drawable/bg_main_menu">
+
+    <ImageView
+        app:srcCompat="@drawable/img_vk_unact"
+        android:id="@+id/img_vk_unact"
+        android:layout_width="120pt"
+        android:layout_height="20pt"
+        android:layout_marginBottom="165dp"
+        android:layout_above="@+id/img_exit"
+        android:layout_centerHorizontal="true" />
+
+    <ImageView
+        android:layout_width="30pt"
+        app:srcCompat="@drawable/img_exit"
+        android:id="@+id/img_exit"
+        android:layout_height="30pt"
+
+        android:layout_alignTop="@+id/img_go"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="10pt" />
+
+    <ImageView
+        android:layout_width="28pt"
+        android:layout_height="28pt"
+        app:srcCompat="@drawable/img_go"
+        android:id="@+id/img_go"
+        android:layout_marginRight="10pt"
+        android:layout_marginBottom="19dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="22dp" />
+
+
+    <com.twitter.sdk.android.core.identity.TwitterLoginButton
+        android:id="@+id/twitter_login_btn"
+        android:layout_width="120pt"
+        android:layout_height="22pt"
+        android:layout_alignTop="@+id/imageView2"
+        android:layout_alignStart="@+id/img_vk_unact"
+        android:layout_marginStart="16dp" />
+
+    <ImageView
+        app:srcCompat="@drawable/img_tw_unact"
+        android:id="@+id/imageView2"
+        android:layout_marginBottom="60dp"
+        android:layout_height="22pt"
+        android:layout_above="@+id/img_exit"
+        android:layout_alignStart="@+id/twitter_login_btn"
+        android:layout_width="123pt" />
+
+    <ImageView
+        app:srcCompat="@drawable/img_vk_act"
+        android:id="@+id/img_vk_act"
+        android:layout_width="120pt"
+        android:layout_height="22pt"
+        android:layout_alignBottom="@+id/img_vk_unact"
+        android:layout_alignStart="@+id/twitter_login_btn" />
+
+</RelativeLayout>

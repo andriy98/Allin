@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.home.firstproject">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:name=".Application"
+        android:allowBackup="true"
+        android:icon="@mipmap/app_icon"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/app_id" />
+
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="019b4b13b5ac233c635bc91424ef98d18383bc25" />
+
+        <activity android:name=".MainMenu" />
+        <activity
+            android:name=".vk_auth"
+            android:label="Авторизація" />
+        <activity android:name=".SendMessage" />
+        <activity
+            android:name=".feed"
+            android:label="@string/title_activity_feed"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".View_friend_photo" />
+        <activity android:name=".View_friend_wall"
+            android:windowSoftInputMode="stateHidden"/>
+        <activity android:name=".View_fbfriend_wall" />
+        <activity android:name=".Likes"></activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/wall"
+            android:icon="@drawable/ic_wall"
+            android:title="Стіна" />
+        <item
+            android:id="@+id/nav_camera"
+            android:icon="@drawable/ic_friends"
+            android:title="Друзі" />
+        <item
+            android:id="@+id/nav_gallery"
+            android:icon="@drawable/ic_mess"
+            android:title="Повідомлення" />
+        <item
+            android:id="@+id/nav_photo"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="Фотографії" />
+        <item
+            android:id="@+id/nav_slideshow"
+            android:icon="@drawable/ic_feed"
+            android:title="Новини" />
+        <item
+            android:id="@+id/nav_manage"
+            android:icon="@drawable/ic_groups"
+            android:title="Спільноти" />
+        <item
+            android:id="@+id/nav_send"
+            android:icon="@drawable/ic_exit"
+            android:title="Вихід" />
+    </group>
+
+
+
+</menu>

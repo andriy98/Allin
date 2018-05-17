@@ -89,31 +89,13 @@ public class FB_auth extends Fragment {
                         new GraphRequest.Callback() {
                             @Override
                             public void onCompleted(GraphResponse response) {
-                                System.out.println("Response error: " + response.getError());
-                                System.out.println("Raw: " + response.getRawResponse());
                                 // Insert your code here
                             }
                         });
 
                 request.executeAsync();
 
-                    /*
-                    String userId = token.getUserId();
-                    String path  = "/friends";
-                    new GraphRequest(
-                            token,
-                            userId+path,
-                            null,
-                            HttpMethod.GET,
-                            new GraphRequest.Callback() {
-                                public void onCompleted(GraphResponse response) {
-                    handle the result
-                                    System.out.println("Response error: " + response.getError());
-                                    System.out.println("Raw: " + response.getRawResponse());
 
-                                }
-                            }
-                    ).executeAsync();*/
             }
         });
 

@@ -39,7 +39,6 @@ public class CustomList_mes   extends ArrayAdapter {
         TextView txtTitle = (TextView) rowView.findViewById(R.id.text1);
         TextView txtTitle2 = (TextView) rowView.findViewById(R.id.text2);
 
-        System.out.println("Helloo23"+(String.valueOf(vhod.get(position))));
 
 
 

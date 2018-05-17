@@ -56,9 +56,7 @@ public class VK_wall_fragment extends Fragment {
     arrayname.clear();
 
         for (int i=0;i<arrayfrom.size();i++){
-            System.out.println("AWkl"+arrayfrom);
             VKRequest vkRequest = VKApi.users().get(VKParameters.from(VKApiConst.USER_IDS, arrayfrom.get(i)));
-            System.out.println("IKIA"+arrayfrom.size());
             /*VKParameters vkParameters = new VKParameters();
             vkParameters.put("user_ids", arrayfrom.get(i));
             VKRequest vkRequesttit = new VKRequest("users.get", vkParameters);
@@ -72,8 +70,6 @@ public class VK_wall_fragment extends Fragment {
                     super.onComplete(response1);
                     try {
                         JSONArray jsonArray1 = (JSONArray) response1.json.get("response");
-                        System.out.println("Mitka1" + Arrays.asList(jsonArray1));
-                        System.out.println("Marcelo"+jsonArray1.length());
 ///                        for (int j=0;j<arrayfrom.size();j++) {
                             JSONObject name = (JSONObject) jsonArray1.get(0);
                         arrayname.add(name.getString("first_name")+" "+name.getString("last_name"));
@@ -82,15 +78,13 @@ public class VK_wall_fragment extends Fragment {
                             CustomList_wall adapter = new CustomList_wall(getActivity(), arraypost, arraydate, arraycheck, arrayphoto, arrayname);
                             listView.setAdapter(adapter);
                             //tut adapter mosh
-                            System.out.println("KJOLl"+arrayname);
                         }
                         //}
                     }catch (JSONException e) {
                         e.printStackTrace();
                     }
 
-                    System.out.println("KJ"+Arrays.asList(arraydate));
-                    System.out.println("KJOL"+Arrays.asList(arraypost));
+
 
 
                 }
@@ -113,11 +107,9 @@ public class VK_wall_fragment extends Fragment {
                             @Override
                             public void onComplete(VKResponse response) {
                                 super.onComplete(response);
-                                System.out.println(response.responseString);
                                 try {
                                     JSONObject jsonObject = (JSONObject) response.json.get("response");
                                     JSONArray jsonArray = (JSONArray) jsonObject.get("items");
-                                    System.out.println("ssshsh"+jsonArray);
                                     for (int i = 0; i<jsonArray.length();i++){
                                         JSONObject name  = (JSONObject) jsonArray.get(i);
                                         arraypost.add(name.getString("text"));
@@ -144,10 +136,6 @@ public class VK_wall_fragment extends Fragment {
                                 }
                                 requ();
 
-                                System.out.println("Hello1"+Arrays.asList(arraypost));
-                                System.out.println("Hello2"+Arrays.asList(arraycheck));
-                                System.out.println("Hellokrav"+Arrays.asList(arrayfrom));
-                                System.out.println("Hellokrav1"+Arrays.asList(arrayphoto));
 
 
 
@@ -249,15 +237,12 @@ public class VK_wall_fragment extends Fragment {
                     @Override
                     public void onError(VKError error) {
                         super.onError(error);
-                        System.out.println("Помилка !");
                     }
 
                     @Override
                     public void onComplete(VKResponse response) {
                         super.onComplete(response);
                         Toast.makeText(getContext(),"Лайк додано",Toast.LENGTH_LONG).show();
-                        System.out.println("KOLO"+response.responseString);
-
                     }
                 });
 
@@ -282,7 +267,6 @@ public class VK_wall_fragment extends Fragment {
                     @Override
                     public void onComplete(VKResponse response) {
                         super.onComplete(response);
-                        System.out.println("YEAP"+response.responseString);
                         Toast.makeText(getContext(), "Запис успішно видалено !",Toast.LENGTH_LONG).show();
                     }
                 });

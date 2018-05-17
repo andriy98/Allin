@@ -79,7 +79,6 @@ public class FB_photo_fragment extends Fragment {
                     @Override
                     public void onCompleted(GraphResponse response) {
                         // Insert your code here
-                        System.out.println("REQW" + response.getRawResponse());
                         JSONObject jsonObject;
                         try {
                             jsonObject = (JSONObject) new JSONObject(response.getRawResponse());
@@ -94,7 +93,6 @@ public class FB_photo_fragment extends Fragment {
                                 arrayphotourl.add(source.getString("source"));
 
                             }
-                            System.out.println("AZQWE"+jsonArray);
                         } catch (JSONException e) {
                             e.printStackTrace();
                         }

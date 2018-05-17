@@ -48,8 +48,7 @@ public class SendMessage extends Activity{
         text.setText("");
        // Arrays.sort(inList.toArray(), Collections.reverseOrder());
        // Arrays.sort(outList.toArray(), Collections.reverseOrder());
-        System.out.println("VHOD"+Arrays.asList(vhod));
-        System.out.println("IZHOD"+Arrays.asList(izhod));
+
 
 
         listView = (ListView) findViewById(R.id.listMsg);
@@ -62,14 +61,12 @@ public class SendMessage extends Activity{
         send.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                System.out.println("String.valueOf("+id);
                 VKRequest request = new VKRequest("messages.send", VKParameters.from(VKApiConst.USER_ID,id, VKApiConst.MESSAGE, text.getText().toString()));
 
                 request.executeWithListener(new VKRequest.VKRequestListener() {
                     @Override
                     public void onError(VKError error) {
                         super.onError(error);
-                        System.out.println("FRIENDSERROR"+error.toString());
                     }
 
                     @Override

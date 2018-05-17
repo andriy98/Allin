@@ -64,7 +64,6 @@ public class CustomList_friendwall extends ArrayAdapter {
                 @Override
                 public void onComplete(VKResponse response) {
                     super.onComplete(response);
-                    System.out.println("SASAR" +response.responseString);
                     try {
                         JSONArray jsonArray = (JSONArray) response.json.get("response");
                         for (int i = 0; i < jsonArray.length(); i++) {

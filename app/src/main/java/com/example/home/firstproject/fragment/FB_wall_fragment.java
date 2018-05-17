@@ -102,9 +102,6 @@ public class FB_wall_fragment  extends Fragment{
                         }
                         CustomList_fbwall adapter = new CustomList_fbwall(getActivity(), arrayfrom, arraydate, arraymessage);
                         listView.setAdapter(adapter);
-                        System.out.println("WALLFB" + Arrays.asList(arrayfrom));
-                        System.out.println("WALLFB" + Arrays.asList(arraydate));
-                        System.out.println("WALLFB" + Arrays.asList(arraymessage));
 
                     }
                 });

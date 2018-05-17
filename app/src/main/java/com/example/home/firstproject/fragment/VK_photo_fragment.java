@@ -103,14 +103,13 @@ public class VK_photo_fragment extends Fragment {
                     @Override
                     public void onError(VKError error) {
                         super.onError(error);
-                        System.out.println("Помилка !");
+
                     }
 
                     @Override
                     public void onComplete(VKResponse response) {
                         super.onComplete(response);
                         Toast.makeText(getContext(),"Лайк додано",Toast.LENGTH_LONG).show();
-                        System.out.println("KOLO"+response.responseString);
 
                     }
                 });
@@ -155,13 +154,11 @@ public class VK_photo_fragment extends Fragment {
             @Override
             public void onError(VKError error) {
                 super.onError(error);
-                System.out.println("A ot i photo"+error);
             }
 
             @Override
             public void onComplete(VKResponse response) {
                 super.onComplete(response);
-                System.out.println("NALDO"+response.responseString);
                 try {
                     JSONObject jsonObject = (JSONObject) response.json.get("response");
                     JSONArray jsonArray = (JSONArray) jsonObject.get("items");

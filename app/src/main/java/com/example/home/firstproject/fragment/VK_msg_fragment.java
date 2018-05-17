@@ -40,7 +40,6 @@ public class VK_msg_fragment extends Fragment {
             @Override
             public void onComplete(VKResponse response) {
                 super.onComplete(response);
-                System.out.println("responseE" + response.responseString);
                 list1 = (VKList) response.parsedModel;
             }
         });
@@ -57,7 +56,6 @@ public class VK_msg_fragment extends Fragment {
             @Override
             public void onComplete(VKResponse response) {
                 super.onComplete(response);
-                System.out.println("Pasha"+response.responseString);
                 final ArrayList<String> arrayList = new ArrayList<>();
                 try {
 
@@ -81,7 +79,6 @@ public class VK_msg_fragment extends Fragment {
                                     super.onComplete(response1);
                                     try {
                                         JSONArray jsonArray1 = (JSONArray) response1.json.get("response");
-                                        System.out.println("PRINTER2" + Arrays.asList(jsonArray1));
 
                                         for (int i1 = 0; i1 < jsonArray1.length(); i1++) {
 

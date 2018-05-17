@@ -60,15 +60,10 @@ public class VK_groups_fragment  extends Fragment{
             @Override
             public void onComplete(VKResponse response) {
                 super.onComplete(response);
-                System.out.println(response.responseString);
-
-
-
                 try {
 
                     JSONObject jsonObject = (JSONObject) response.json.get("response");
                     JSONArray jsonArray = (JSONArray) jsonObject.get("items");
-                    System.out.println("ssshsh"+jsonArray);
                     for (int i = 0; i<jsonArray.length();i++){
                         JSONObject name  = (JSONObject) jsonArray.get(i);
                         arraylist_groups.add(name.getString("name"));
@@ -104,7 +99,6 @@ public class VK_groups_fragment  extends Fragment{
                     @Override
                     public void onComplete(VKResponse response) {
                         super.onComplete(response);
-                        System.out.println("SASAR" +response.responseString);
                         try {
                             JSONArray jsonArray = (JSONArray) response.json.get("response");
                             for (int i = 0; i < jsonArray.length(); i++) {
@@ -114,7 +108,6 @@ public class VK_groups_fragment  extends Fragment{
                         } catch (JSONException e) {
                             e.printStackTrace();
                         }
-                        System.out.println("SASAR1"+ Arrays.asList(arraynew));
                     }
 
 
@@ -139,7 +132,6 @@ public class VK_groups_fragment  extends Fragment{
                     @Override
                     public void onComplete(VKResponse response) {
                         super.onComplete(response);
-                        System.out.println("HERE"+response.responseString);
                         Toast.makeText(getContext(), "Успішно !" ,Toast.LENGTH_SHORT).show();
                     }
                 });

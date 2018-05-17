@@ -107,11 +107,9 @@ public class View_friend_wall extends AppCompatActivity {
             @Override
             public void onComplete(VKResponse response) {
                 super.onComplete(response);
-                System.out.println(response.responseString);
                 try {
                     JSONObject jsonObject = (JSONObject) response.json.get("response");
                     JSONArray jsonArray = (JSONArray) jsonObject.get("items");
-                    System.out.println("Ident"+Arrays.asList(jsonArray));
                     for (int i = 0; i<jsonArray.length();i++){
                         JSONObject name  = (JSONObject) jsonArray.get(i);
                         arraypost.add(name.getString("text"));
@@ -119,7 +117,6 @@ public class View_friend_wall extends AppCompatActivity {
                         arrayid.add(name.getString("from_id"));
                         if (((JSONObject) jsonArray.get(i)).has("attachments")) {
                             JSONArray jsonArray1 = name.getJSONArray("attachments");
-                            System.out.println("Karpaty"+jsonArray1);
                             for (int j=0;j<jsonArray1.length();j++) {
                                 JSONObject object = (JSONObject) jsonArray1.getJSONObject(j).get("photo");
                                 if (jsonArray1.getJSONObject(j).getString("type").equals("video") ||
@@ -143,9 +140,6 @@ public class View_friend_wall extends AppCompatActivity {
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
-                System.out.println("IDENT"+ Arrays.asList(arraypost));
-                System.out.println("IDENT2"+Arrays.asList(arrayid));
-                System.out.println("weraf"+Arrays.asList(arrayphoto));
                 CustomList_friendwall adapter = new CustomList_friendwall(getApplicationContext(), arraypost, arraydate,arrayid,arrayphoto);
                 listView.setAdapter(adapter);
 
@@ -158,7 +152,6 @@ public class View_friend_wall extends AppCompatActivity {
             @Override
             public void onError(VKError error) {
                 super.onError(error);
-                System.out.println("STAS"+error.errorMessage);
                 Toast.makeText(getApplicationContext(), "Помилка !",Toast.LENGTH_LONG).show();
 
             }

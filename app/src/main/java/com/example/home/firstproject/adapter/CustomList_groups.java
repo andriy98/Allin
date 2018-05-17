@@ -35,7 +35,6 @@ public class CustomList_groups extends ArrayAdapter {
         View rowView=inflater.inflate(R.layout.mylist_groups, null,true);
         TextView txtTitle = (TextView) rowView.findViewById(R.id.item);
         ImageView imageView = (ImageView) rowView.findViewById(R.id.icon_group);
-                System.out.println("Helloo23"+(String.valueOf(arrayList_groups_photo.get(position))));
         Picasso.with(context)
                 .load(String.valueOf(arrayList_groups_photo.get(position)))
                 .transform(new CircularTransformation(0))

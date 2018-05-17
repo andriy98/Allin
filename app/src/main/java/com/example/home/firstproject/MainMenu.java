@@ -131,17 +131,7 @@ public class MainMenu extends AppCompatActivity {
                 });
 
 
-        /*VKRequest vkRequest = VKApi.friends().get(VKParameters.from(VKApiConst.FIELDS, "first_name, photo_50","order","hints"));
-        vkRequest.executeWithListener(new VKRequest.VKRequestListener() {
-                                          @Override
-                                          public void onComplete(VKResponse response) {
-                                              super.onComplete(response);
-                                              System.out.println("responseE" + response.responseString);
-                                              list = (VKList) response.parsedModel;
-                                          }
-                                      }
-        );
-*/
+
 
                 if (VKSdk.isLoggedIn()==false){
                     img_enter.setClickable(true);

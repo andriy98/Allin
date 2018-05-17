@@ -35,7 +35,7 @@ public class CustomListAdapter extends ArrayAdapter {
         ImageView imageView = (ImageView) rowView.findViewById(R.id.icon);
         TextView extratxt = (TextView) rowView.findViewById(R.id.textView1);
 
-        System.out.println("Helloo23"+(String.valueOf(arrayList_photo.get(position))));
+
         Picasso.with(context)
                 .load(String.valueOf(arrayList_photo.get(position)))
                 .transform(new CircularTransformation(0))

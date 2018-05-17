@@ -56,8 +56,6 @@ public class FB_friends_fr extends Fragment {
                 new GraphRequest.Callback() {
                     @Override
                     public void onCompleted(GraphResponse response) {
-                        System.out.println("Response error: " + response.getError());
-                        System.out.println("Raw: " + response.getRawResponse());
                         JSONObject jsonObject = null;
                         try {
                             jsonObject = (JSONObject) new JSONObject(response.getRawResponse());
@@ -72,8 +70,6 @@ public class FB_friends_fr extends Fragment {
 
 
                             }
-                            System.out.println("Arena"+Arrays.asList(jsonArray));
-                            System.out.println("NAMEME"+Arrays.asList(arrayphoto));
                             ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(getContext(),
                                      android.R.layout.simple_expandable_list_item_1, arrayname);
                             listView.setAdapter(arrayAdapter);

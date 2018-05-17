@@ -63,14 +63,11 @@ public class VK_newsfeed_fragment extends Fragment {
             @Override
             public void onComplete(VKResponse response) {
                 super.onComplete(response);
-                System.out.println("OJOLO"+response.responseString);
                 try {
                     JSONObject jsonObject = (JSONObject) response.json.get("response");
                     JSONArray jsonArray = (JSONArray) jsonObject.get("items");
-                    System.out.println("ssshsh"+jsonArray);
                     for (int i = 0; i<jsonArray.length();i++){
                         JSONObject name  = (JSONObject) jsonArray.get(i);
-                        System.out.println("Olya"+name.getString("text"));
                         arraytext.add(name.getString("text"));
 
 

@@ -99,15 +99,10 @@ public class CustomAdapter extends BaseAdapter {
                     @Override
                     public void onComplete(VKResponse response) {
                         super.onComplete(response);
-                        System.out.println(response.responseString);
-
-
-
                         try {
 
                             JSONObject jsonObject = (JSONObject) response.json.get("response");
                             JSONArray jsonArray = (JSONArray) jsonObject.get("items");
-                            System.out.println(""+jsonArray);
                             for (int i = 0; i<jsonArray.length();i++){
                                 JSONObject name  = (JSONObject) jsonArray.get(i);
 
@@ -173,8 +168,6 @@ public class CustomAdapter extends BaseAdapter {
                             //intent.putExtra("id", id).putExtra("inList", inList).putExtra("out",outList);
                             intent.putExtra("id", id).putExtra("vhod", vhod).putExtra("izhod",izhod);
                             getApplicationContext().startActivity(intent);
-                            System.out.println("Messi"+response.responseString);
-                            System.out.println("RON"+ Arrays.asList(vhod));
                              //context.startActivity(, SendMessage.class).putExtra("id", id).putExtra("inList", inList).putExtra("out",outList));
 
                         } catch (JSONException e) {

@@ -45,7 +45,6 @@ public class vk_auth extends AppCompatActivity {
                     @Override
                     public void onComplete(VKResponse response) {
                         super.onComplete(response);
-                        System.out.println("Messages"+response.responseString);
                     }
                 });
 
